@@ -1,0 +1,177 @@
+/* Color variables */
+:root{
+	--color-a: #E8DED2;
+	--color-b: #a3d2ca;
+	--color-c: #5eaaa8;
+	--color-d: #056676;
+}
+
+/* Browser Reset */
+
+html {
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+/* Styling */
+body{
+	background-color: var(--color-a);
+	height: 100vh;
+	font-family: 'Baloo Tamma 2', cursive;
+	font-size: 2.5rem;
+	color: var(--color-a);
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.app-container{
+	background-color: var(--color-c);
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+	border-radius: 10px;
+	grid-column: 2 / 3;
+	margin-top: 5rem;
+	position: relative;
+	height: 80vh;
+}
+
+
+/* Form */
+.word{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 3rem;
+	border-radius: 10px;
+	border: none;
+	background-color: var(--color-b);
+	color: #333;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	font-weight: 400;
+	transition: height .2s;
+}
+
+.submit{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 3rem;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border: none;
+	background-color: var(--color-a);
+	padding: 0 1rem;
+	transition: height .2s;
+}
+
+.word:focus{
+	outline: none;
+	height: 5rem;
+}
+
+.word:focus + .submit{
+	outline: none;
+	height: 5rem;
+}
+
+.submit:focus{
+	outline: none;
+}
+
+
+
+form{
+	margin-bottom: 5rem;
+}
+
+.word-output{
+	text-align: center;
+	text-decoration: underline;
+	animation: fadeIn .3s;
+}
+
+.content-container{
+	width: 85%;
+	margin: 0 auto 4rem auto;
+}
+
+.definitions{
+	overflow-y: auto;
+	height: 20rem;
+	
+}
+
+.definitions ul {
+	margin-left: 3rem;
+}
+
+.definitions ul li{
+	line-height: 1.2;
+	font-size: 2rem;
+}
+
+.navigation{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.navigation ul li a,
+.navigation ul li a:link,
+.navigation ul li a:visited{
+	text-decoration: none;
+	color: var(--color-a);
+}
+
+.navigation{
+	width: 100%;
+	border-top: 1px solid var(--color-a);
+}
+
+.navigation ul{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+.navigation ul li a{
+	height: 100%;
+}
+
+.navigation ul li:not(:last-child){
+	border-right: 1px solid var(--color-a);
+	padding-right: 3rem;
+}
+
+
+.fadeIn{
+	animation: fadeIn .3s ease-in;
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+
+
+
